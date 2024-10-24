@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body, html {
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.background-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+#bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.content {
+    text-align: center;
+    z-index: 1;
+}
+.title {
+    margin-bottom: 20px;
+}
+.logo {
+    width: 150px;
+    height: auto;
+    filter: invert(1);
+    margin-bottom: 20px;
+}
+.title h1 {
+    font-size: 4rem;
+    letter-spacing: 0.2rem;
+}
+.title p {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+.button-container {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+.button {
+    width: 200px;
+    height: 60px;
+    padding: 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+    text-align: center;
+    line-height: 60px;
+    border: 2px solid #fff;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+}
+.button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+.sound-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    text-transform: uppercase;
+    border: 2px solid #fff;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    transition: background-color 0.3s ease, opacity 0.5s ease;
+    cursor: pointer;
+    opacity: 0.7;
+    text-align: center;
+}
+.sound-button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    opacity: 1;
+}
+.sound-button.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
+@media (max-width: 480px) {
+    .button {
+        width: 130px;
+        height: 45px;
+        font-size: 0.9rem;
+        line-height: 45px;
+    }
+
+    .sound-button {
+        padding: 7px 12px;
+        font-size: 0.8rem;
+    }
+}
+@media (max-width: 768px) {
+    .logo {
+      width: 200px; /* Уменьшенный логотип для мобильных устройств */
+      height: auto;
+    }
+  }
+  

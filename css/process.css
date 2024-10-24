@@ -1,0 +1,94 @@
+/* Общие стили для страницы */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    height: 100%;
+    overflow: hidden;
+    background-color: black;
+    color: white;
+  }
+  
+  /* Видео фон */
+  /* Видео фон */
+.background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw; /* Используем vw для полной ширины */
+    height: 100vh; /* Используем vh для полной высоты */
+    overflow: hidden; /* Скрываем переполнение */
+    z-index: -1;
+}
+
+#myVideo {
+    width: 100%; /* Полная ширина */
+    height: 100%; /* Полная высота */
+    object-fit: cover; /* Заполнение по размеру */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+  
+  /* Логотип */
+  #logo-container {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    filter: invert(1);
+
+    transform: translateX(-50%);
+    z-index: 2;
+  }
+  
+  #logo {
+    position: absolute;
+  width: 25vw; /* Адаптивная ширина */
+  max-width: 468px;
+  height: auto; /* Автоматическая высота */
+  left: 50%;
+  top: 20px;
+  transform: translateX(-50%);
+  }
+  
+ /* Текстовые блоки */
+.text-block {
+    position: absolute;
+    width: 50%;
+    z-index: 1;
+    padding: 20px;
+    opacity: 0;
+    transform: translateY(50px); /* Начальная позиция немного ниже */
+    transition: opacity 3s ease-in-out, transform 3s ease-in-out; /* Плавный переход */
+  }
+  
+  .text-block.left {
+    top: 40%;
+    left: 10%;
+  }
+  
+  .text-block.right {
+    top: 60%;
+    right: 10%;
+  }
+  
+  /* Класс, который добавляется для плавного появления */
+  .fade-in {
+    opacity: 1;
+    transform: translateY(0); /* Перемещение в исходное положение */
+  }
+  
+  
+  /* Ключевые кадры для анимации */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
