@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aether</title>
+    <meta name="viewport" content="width=device-width, initial-scale=0.9">
+
+    <link rel="icon" type="image/png" href="/images/1.png">
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <style>
+        /* лэээ скрыттые ылы добавление */
+        .fade-out {
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="background-container">
+        <video autoplay muted loop id="bg-video">
+            <source src="videos/1.mp4" type="video/mp4">
+        </video>
+        <audio id="bg-audio" loop>
+            <source src="sounds/sound.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <div class="content">
+        <div class="title">
+            <img src="images/logo.png" alt="Aether Logo" class="logo">
+        </div>
+
+        <div class="button-container">
+            <div class="main-buttons">
+                <a href="store.html" class="button">Store</a>
+                <a href="process.html" class="button">Process</a>
+                <a href="about.html" class="button">About</a>
+            </div>
+            <button class="sound-button" id="sound-toggle">Sound</button>
+        </div>
+    </div>
+
+    <script>
+        const soundToggle = document.getElementById('sound-toggle');
+        const video = document.getElementById('bg-video');
+        const audio = document.getElementById('bg-audio');
+
+        soundToggle.addEventListener('click', function () {
+            video.muted = !video.muted; // лэээ выключить
+            if (video.muted) {
+                audio.pause();
+            } else {
+                audio.play();
+            }
+
+            // лэээ скрыть
+            soundToggle.classList.add('fade-out');
+        });
+    </script>
+</body>
+</html>
